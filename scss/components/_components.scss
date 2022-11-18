@@ -1,0 +1,106 @@
+body {
+  font-family: "TTNorms";
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+%links {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+%list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 1440px;
+  @media screen and (min-width: 768px) {
+    padding: 0 40px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 0 60px;
+  }
+}
+.main-container {
+  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 1094px;
+  @media screen and (min-width: 768px) {
+    padding: 0 40px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 0 60px;
+  }
+}
+
+.title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.18;
+  background: $gradient-red-text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  @media screen and (min-width: 768px) {
+    font-size: 38px;
+  }
+  @media screen and (min-width: 1024px) {
+    font-size: 42px;
+    line-height: 1.19;
+  }
+}
+.text {
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: normal;
+
+  color: $clients-9;
+  @media screen and (min-width: 768px) {
+    font-size: 21px;
+  }
+}
+.paragraph {
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: normal;
+
+  color: $clients-9;
+}
+.current-service {
+  border-bottom: solid 2px $white;
+}
+
+.button {
+  font-size: 14px;
+  line-height: 1.2;
+
+  color: $white;
+
+  background: $button-regular;
+  border: 1px solid transparent;
+  cursor: pointer;
+  box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+  border-radius: 12px;
+  &:hover {
+    background-color: $button-hover;
+  }
+  &:focus {
+    background-color: $button-active;
+  }
+}

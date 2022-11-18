@@ -1,0 +1,207 @@
+.footer {
+  margin: 0 auto;
+  max-width: 1440px;
+  background-color: $bg;
+  text-align: center;
+  transition: background-color $transition-basic;
+  &:hover,
+  &:focus {
+    background-color: $bg-alt;
+  }
+  @media screen and (max-width: 767px) {
+    padding-bottom: 118px;
+  }
+  @media screen and (min-width: 767px) {
+    padding-bottom: 81px;
+  }
+  @media screen and (min-width: 1024px) {
+    padding: 0 60px 40px 60px;
+  }
+}
+.footer-line {
+  height: 4px;
+  width: 100%;
+  background-color: $separator;
+}
+.footer-content {
+  margin: 20px 0 0 0;
+  padding: 0;
+  @media screen and (min-width: 767px) {
+    margin: 29px 0 0 0;
+  }
+  @media screen and (min-width: 1024px) {
+    margin: 30px 0 0 0;
+    display: flex;
+
+    justify-content: space-between;
+  }
+}
+.footer-contact-service {
+  padding: 20px 0 0 0;
+  margin: 0;
+  @media screen and (min-width: 767px) {
+    padding: 29px 0 0 0;
+  }
+  @media screen and (min-width: 1024px) {
+    padding: 30px 0 0 0;
+    display: flex;
+
+    justify-content: space-between;
+  }
+}
+.footer-contact-addrs {
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 767px) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 22px;
+  }
+}
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 767px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 29px;
+  }
+  @media screen and (min-width: 1024px) {
+    justify-content: start;
+  }
+}
+.address {
+  position: relative;
+  display: inline-block;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.18px;
+  margin: 0;
+  color: $main;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 26px;
+    &::after {
+      position: absolute;
+      display: inline-block;
+      content: "";
+      top: 50%;
+
+      width: 6px;
+      height: 6px;
+      transform: translateY(-50%);
+      background-color: $text;
+      border-radius: 50%;
+    }
+    &::after {
+      right: -14px;
+    }
+  }
+}
+
+.links {
+  @extend %links;
+}
+.footer-text,
+.footer-mail {
+  transition: color $transition-basic;
+  &:hover,
+  &:focus {
+    color: $accent;
+  }
+}
+.footer-text {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  color: $button-regular;
+  @media screen and (max-width: 767px) {
+    margin-top: 10px;
+  }
+}
+
+.footer-links-icon {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.footer-icon {
+  height: 38px;
+  width: 38px;
+  fill: $button-regular;
+  transition: fill $transition-basic;
+  @media screen and (max-width: 767px) {
+    margin: 20px 0;
+  }
+  @media screen and (min-width: 768px) {
+    margin-right: 17px;
+  }
+}
+.footer-icon :hover,
+.footer-icon:focus {
+  fill: $accent;
+}
+.footer-tel {
+  position: relative;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.18;
+
+  color: $main-alt;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-right: 27px;
+    &::after,
+    &::before {
+      position: absolute;
+      display: inline-block;
+      content: "";
+      top: 50%;
+
+      width: 6px;
+      height: 6px;
+      transform: translateY(-50%);
+      background-color: $text;
+      border-radius: 50%;
+    }
+
+    &::after {
+      right: -14px;
+    }
+    &::before {
+      left: -10px;
+    }
+  }
+}
+.footer-mail {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.18;
+
+  color: $button-regular;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 20px;
+  }
+}
+.footer-copy-text {
+  margin: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.18;
+
+  color: $text;
+}

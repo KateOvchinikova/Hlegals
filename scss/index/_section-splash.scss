@@ -1,0 +1,52 @@
+.splash {
+  padding-top: 138px;
+  text-align: center;
+  background-image: url(../img/p-symbol.svg);
+  background-repeat: no-repeat;
+  background-position: left calc(50% + 11px) top calc(50% + 87px);
+
+  background-size: 430px;
+  @media screen and (min-width: 768px) {
+    background-image: url("../img/p-symbol.svg"), url("../img/pattern.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: left calc(50% + 8px) top calc(50% + 88px),
+      left calc(50% + 6px) top calc(50% + 20px);
+  }
+}
+.splash-text {
+  font-weight: normal;
+  font-size: 38px;
+  line-height: 1.18;
+  margin-bottom: 63px;
+
+  color: $white;
+
+  @media screen and (min-width: 768px) {
+    display: inline-block;
+
+    width: 700px;
+  }
+}
+.splash-gradient {
+  padding-top: 138px;
+  height: 200px;
+  background: linear-gradient(
+    180deg,
+    rgba(50, 50, 100, 0) 16.67%,
+    #323264 100%
+  );
+}
+
+.splash-button {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 auto;
+  background-color: transparent;
+  border: 1px solid $text;
+  border-radius: 50%;
+  cursor: pointer;
+}
