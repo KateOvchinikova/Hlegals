@@ -73,16 +73,16 @@
   }
 }
 .address {
-  position: relative;
   display: inline-block;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.18px;
+  line-height: 1.18;
   margin: 0;
   color: $main;
 
   @media screen and (min-width: 768px) {
+    position: relative;
     margin-right: 26px;
     &::after {
       position: absolute;
@@ -105,6 +105,7 @@
 .links {
   @extend %links;
 }
+
 .footer-text,
 .footer-mail {
   transition: color $transition-basic;
@@ -117,13 +118,14 @@
   font-style: normal;
   font-weight: 700;
   font-size: 12px;
-  line-height: 1.16px;
+  line-height: 1.16;
   letter-spacing: 1px;
   text-transform: uppercase;
 
   color: $button-regular;
   @media screen and (max-width: 767px) {
-    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 
@@ -140,7 +142,7 @@
   fill: $button-regular;
   transition: fill $transition-basic;
   @media screen and (max-width: 767px) {
-    margin: 20px 0;
+    margin: 10px 0 20px 0;
   }
   @media screen and (min-width: 768px) {
     margin-right: 17px;

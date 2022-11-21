@@ -2,19 +2,22 @@
   margin-bottom: 22px;
   @media screen and (min-width: 768px) {
     display: flex;
+    align-items: start;
     margin-bottom: 62px;
   }
 }
 .person-page {
-  max-width: 413px;
   border-radius: 12px;
   @media screen and (min-width: 768px) {
     margin-right: 20px;
+    max-width: 300px;
   }
   @media screen and (min-width: 1024px) {
     margin-right: 41px;
+    max-width: 413px;
   }
 }
+
 .person-description {
   @media screen and (min-width: 768px) {
     margin-top: 20px;
@@ -27,6 +30,7 @@
   @media screen and (min-width: 768px) {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
   }
 }
 .person-line {
@@ -56,25 +60,27 @@
 }
 .person-contact-items {
   position: relative;
-  &::after,
-  &::before {
-    position: absolute;
-    display: inline-block;
-    content: "";
-    top: 50%;
+  @media screen and (min-width: 768px) {
+    &::after,
+    &::before {
+      position: absolute;
+      display: inline-block;
+      content: "";
+      top: 50%;
 
-    width: 6px;
-    height: 6px;
-    transform: translateY(-50%);
-    background-color: $separator;
-    border-radius: 50%;
-  }
+      width: 6px;
+      height: 6px;
+      transform: translateY(-50%);
+      background-color: $separator;
+      border-radius: 50%;
+    }
 
-  &::after {
-    right: -14px;
-  }
-  &::before {
-    left: -14px;
+    &::after {
+      right: -14px;
+    }
+    &::before {
+      left: -14px;
+    }
   }
 }
 .person-text {

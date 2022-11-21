@@ -1784,17 +1784,17 @@ h6 {
 }
 
 .address {
-  position: relative;
   display: inline-block;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.18px;
+  line-height: 1.18;
   margin: 0;
   color: #323264;
 }
 @media screen and (min-width: 768px) {
   .address {
+    position: relative;
     margin-right: 26px;
   }
   .address::after {
@@ -1827,14 +1827,15 @@ h6 {
   font-style: normal;
   font-weight: 700;
   font-size: 12px;
-  line-height: 1.16px;
+  line-height: 1.16;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #24a3ff;
 }
 @media screen and (max-width: 767px) {
   .footer-text {
-    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 
@@ -1854,7 +1855,7 @@ h6 {
 }
 @media screen and (max-width: 767px) {
   .footer-icon {
-    margin: 20px 0;
+    margin: 10px 0 20px 0;
   }
 }
 @media screen and (min-width: 768px) {
@@ -2530,22 +2531,24 @@ h6 {
 @media screen and (min-width: 768px) {
   .person-container {
     display: flex;
+    align-items: start;
     margin-bottom: 62px;
   }
 }
 
 .person-page {
-  max-width: 413px;
   border-radius: 12px;
 }
 @media screen and (min-width: 768px) {
   .person-page {
     margin-right: 20px;
+    max-width: 300px;
   }
 }
 @media screen and (min-width: 1024px) {
   .person-page {
     margin-right: 41px;
+    max-width: 413px;
   }
 }
 
@@ -2562,6 +2565,7 @@ h6 {
   .person-contact {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
   }
 }
 
@@ -2596,22 +2600,24 @@ h6 {
 .person-contact-items {
   position: relative;
 }
-.person-contact-items::after, .person-contact-items::before {
-  position: absolute;
-  display: inline-block;
-  content: "";
-  top: 50%;
-  width: 6px;
-  height: 6px;
-  transform: translateY(-50%);
-  background-color: #e6e6f0;
-  border-radius: 50%;
-}
-.person-contact-items::after {
-  right: -14px;
-}
-.person-contact-items::before {
-  left: -14px;
+@media screen and (min-width: 768px) {
+  .person-contact-items::after, .person-contact-items::before {
+    position: absolute;
+    display: inline-block;
+    content: "";
+    top: 50%;
+    width: 6px;
+    height: 6px;
+    transform: translateY(-50%);
+    background-color: #e6e6f0;
+    border-radius: 50%;
+  }
+  .person-contact-items::after {
+    right: -14px;
+  }
+  .person-contact-items::before {
+    left: -14px;
+  }
 }
 
 .person-text {
